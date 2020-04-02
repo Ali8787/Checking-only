@@ -1,0 +1,91 @@
+python: 
+_________________  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+python Django : 
+_______________________ 
+ 
+for open local server for Django on Desktop as bellow: 
+1- open cmd 
+2- cd Desktop
+3- pip install virtualenv                    if there no file for Django on Desktop 
+4- cls 
+Steps for making virtualenv invarment or local server on Desktop 
+5- virtualenv blog                       after this commend it does file on Desktop with (blog name)
+6- cd blog                              this commend will tell you about the blog files
+7- cls                                   for going to clear 
+8- .\Scripts\activate                    for activating the blog file 
+9- pip install pillow                    for new work to install this tool 
+10- pip freeze                           to know if that tool has been installed 
+11- pip install django                   for installing Django for the computer as new/  waiting untill sayes successfull installed django
+12-pip freeze                            to know the what has been installed
+13- mkdir src                            to make new folder inside blog // important 
+14- django-admin startproject blog .     /for creating project with Django // so when you open the file you will find the project there
+15-python manage.py runserver             /to run the server of the project 
+16-127.0.00.1:8000                        / this ip you open it in browser // Google or other and you will find (django page)
+17-127.0.00.1:8000/admin                  this will open admin page of Django page 
+
+This commends for run and activate the server if it is off 
+1-cd Desktop 
+2- cd blog 
+3- .\Scripts\activate 
+4- cd src
+5- python manage.py runserver               this the last commend for running the server 
+6- Ctrl+c                                   for stoping the Django server from the cdm terminal we press  
+
+for intering your project which on Desktop we do as fallowing:
+1-cd Desktop                                 this first for choosing the the dirction of terminal
+2-cd blog                                    this secound commend and (blog) or any file that is the name it can be changes 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Linux : 
+________________
+Linux commands: 
+for intering the Disktop we do this command                  ls   
+for delet the cmd and make clear    command                  clear  
+
+
+
+Windows: 
+___________ 
+Windows command:
+for intering the Disktop we do this command                 dir   
+for delet the cmd and make clear    command                 cls
+     
