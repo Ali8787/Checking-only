@@ -87,5 +87,133 @@ Windows:
 ___________ 
 Windows command:
 for intering the Disktop we do this command                 dir   
+for delet the cmd and make clear    command                 cls 
+
+
+
+------------------------------------------------------------------------------ 
+
+python: 
+_________________  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+python Django : 
+_______________________ 
+ 
+for open local server for Django on Desktop as bellow: 
+1- open cmd 
+2- cd Desktop
+3- pip install virtualenv                    if there no file for Django on Desktop 
+4- cls 
+Steps for making virtualenv invarment or local server on Desktop 
+5- virtualenv blog                       after this commend it does file on Desktop with (blog name)
+6- cd blog                              this commend will tell you about the blog files
+7- cls                                   for going to clear 
+8- .\Scripts\activate                    for activating the blog file 
+9- pip install pillow                    for new work to install this tool 
+10- pip freeze                           to know if that tool has been installed 
+11- pip install django                   for installing Django for the computer as new/  waiting untill sayes successfull installed django
+12-pip freeze                            to know the what has been installed
+13- mkdir src                            to make new folder inside blog // important 
+14- django-admin startproject blog .     /for creating project with Django // so when you open the file you will find the project there
+15-python manage.py runserver             /to run the server of the project 
+16-127.0.00.1:8000                        / this ip you open it in browser // Google or other and you will find (django page)
+17-127.0.00.1:8000/admin                  this will open admin page of Django page 
+
+This commends for run and activate the server if it is off 
+1-cd Desktop 
+2- cd blog 
+3- .\Scripts\activate 
+4- cd src
+5- python manage.py runserver               this the last commend for running the server  ///         this command is alternative            ./manage.py runserver
+6- Ctrl+c                                                    for stoping the Django server from the cdm terminal we press  
+
+for intering your project which on Desktop we do as fallowing:
+1-cd Desktop                                 this first for choosing the the dirction of terminal
+2-cd blog                                    this secound commend and (blog) or any file that is the name it can be changes 
+
+
+
+
+
+
+
+Django on Linux: 
+This is the fisrt project in Django we do as fallow ; 
+before begin the project you should check with this command your computer and install the missed;  
+Open Terminal :- 
+1- sudo apt install python3                                       This command for installing python3 on Linux
+2-sudo apt install python3-pip                                   This command downloading the pip3 
+3- pip3 -V                                                                  For checking the version of pip3 to make sure you get pip3
+4- python -m pip install --upgrade pip                                    for upgrading the pip only 
+5- pip3 install django                                                   Installing Django on the computer 
+6-django-admin                                                           for checking django is there and every thing is ready for the project 
+The Second Step and start the real project :::::----- 
+1- django-admin startproject My_Site                          this is the first step for the django project and (My_Site) is the name of the project and it could be changed any time.
+2- tree                                                                           this command for checking the project containes 
+3- python3 manage.py runserver                                   this command to run the project to the browser and we use it many times   ///         this command is alternative            ./manage.py runserver
+4- Crtl+C                                                                         this command for stopping the server working
+For making app in our project and this is the second stage; 
+1- python manage.py startapp blog                                 this command for making new app in main project of django 
+
+
+
+
+
+
+
+
+Note : - 
+
+ 
+2- sudo apt-get install (name of the program)          This is for installing new application on Linux
+3- sudo dpkg -i (name of a program)                         This command also for installing new application on Linux
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Linux : 
+________________
+Linux commands: 
+for intering the Disktop we do this command                  ls   
+for delet the cmd and make clear    command                  clear  
+
+
+
+Windows: 
+___________ 
+Windows command:
+for intering the Disktop we do this command                 dir   
 for delet the cmd and make clear    command                 cls
+     
      
