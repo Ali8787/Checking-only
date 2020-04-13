@@ -148,9 +148,6 @@ for intering your project which on Desktop we do as fallowing:
 
 
 
-
-
-
 Django on Linux: 
 This is the fisrt project in Django we do as fallow ; 
 before begin the project you should check with this command your computer and install the missed;  
@@ -163,11 +160,38 @@ Open Terminal :-
 6-django-admin                                                           for checking django is there and every thing is ready for the project 
 The Second Step and start the real project :::::----- 
 1- django-admin startproject My_Site                          this is the first step for the django project and (My_Site) is the name of the project and it could be changed any time.
-2- tree                                                                           this command for checking the project containes 
+2- tree                                                                            this command for checking the project containes 
 3- python3 manage.py runserver                                   this command to run the project to the browser and we use it many times   ///         this command is alternative            ./manage.py runserver
 4- Crtl+C                                                                         this command for stopping the server working
 For making app in our project and this is the second stage; 
 1- python manage.py startapp blog                                 this command for making new app in main project of django 
+2- 
+
+The work steps on project as below; 
+1- urls.py                                                                      this page controlling the other pages 
+       the first step we go to this page to make copy for this link  ( *  path('admin/', admin.site.urls),  *) and change the admin link to another page name word like this (*    path('about/', my_about),  *) and we do this for each page that we add to our app  
+2 - views.py                                                                this page controll the chnging which done in urls.py like what happen above, when we add the link  (*     path('about/', my_about),    *)   we should go to add this function (* def my_about(request):
+                                                          return HttpResponse('my_about')   *) 
+to the views.py page to make running corectly, and also we should add this link  (*   from django.http import HttpResponse         *) in the top of page 
+3- views.py                                        we have to make link to this page we should to make this link (*    from blog import views     *) in top with another links, and blog word this is the name of the app we should be change according to your app name, and also we have to add the word  (*  views   *) to the link down like this (*  path('about/', views.my_about),    *)  
+4- urls.py in my app                            and this is the best way to make new file in app NOT in main project and we save it as (*   urls.py  *) and we transfer all links we made befor and deleted from the original one, and make new link with adding the word (*   include   *) to the path link as in this example (*    from django.urls import path, include    *) 
+5- settings.py                                   we need to add our app to this page  in the line 33 that contains address as (*    INSTALLED_APPS = [     *) so we add our app by name blog this is my  app name, and  we go to apps.py page and we get the get the name of the class that comes after the word class and we got again to the sitting then add this name with page name to  (*   settings.py  *) page as in example  (*   'blog.apps.BlogConfig'    *)
+6- 
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
