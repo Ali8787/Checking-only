@@ -174,9 +174,15 @@ The work steps on project as below;
                                                           return HttpResponse('my_about')   *) 
 to the views.py page to make running corectly, and also we should add this link  (*   from django.http import HttpResponse         *) in the top of page 
 3- views.py                                        we have to make link to this page we should to make this link (*    from blog import views     *) in top with another links, and blog word this is the name of the app we should be change according to your app name, and also we have to add the word  (*  views   *) to the link down like this (*  path('about/', views.my_about),    *)  
+4- urls.py in my app                            and this is the best way to make new file in app NOT in main project and we 
 4- urls.py in my app                            and this is the best way to make new file in app NOT in main project and we save it as (*   urls.py  *) and we transfer all links we made befor and deleted from the original one, and make new link with adding the word (*   include   *) to the path link as in this example (*    from django.urls import path, include    *) 
 5- settings.py                                   we need to add our app to this page  in the line 33 that contains address as (*    INSTALLED_APPS = [     *) so we add our app by name blog this is my  app name, and  we go to apps.py page and we get the get the name of the class that comes after the word class and we got again to the sitting then add this name with page name to  (*   settings.py  *) page as in example  (*   'blog.apps.BlogConfig'    *)
-6- 
+6- templates                                     this folder is nessary to make, we must create it inside of the our app to contain the html files, after we make this file we create html files for each page we wish to put it in our website, and we go to chenge in (*  views.py  *) page and add render to the all functions and that will be after the word ( *  return   *) and fixing the  what is inside the pranthses like this (*  from return HttpResponse('my_about')   to    return render(request, 'about.html')   *) for each function that we would to make page for it. also we delet or we stop the old link  (*   from django.http import HttpResponse    *) with the commit sign # to stop it.
+7- base.html   file                                    when we want to connect the links of another html pages to  the home page we do like so 
+A- we make html file inside a template folder with name (*   base.html   *)
+B- we put in title Base and will contains this links (*    <a href="{% url 'home' %}">Home</a>  *) and  Home is the name of the page, we make this link for each page that we have. 
+C- we go to each page that we have and we put like this python link (*   {% extends 'base.html' %}    *) inside and in top of <body>  </body> of a html frame 
+       
        
 
 
