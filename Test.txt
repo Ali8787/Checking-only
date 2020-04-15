@@ -1,0 +1,164 @@
+python: 
+_________________  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+python Django : 
+_______________________ 
+ 
+for open local server for Django on Desktop as bellow: 
+1- open cmd 
+2- cd Desktop
+3- pip install virtualenv                    if there no file for Django on Desktop 
+4- cls 
+Steps for making virtualenv invarment or local server on Desktop 
+5- virtualenv blog                       after this commend it does file on Desktop with (blog name)
+6- cd blog                              this commend will tell you about the blog files
+7- cls                                   for going to clear 
+8- .\Scripts\activate                    for activating the blog file 
+9- pip install pillow                    for new work to install this tool 
+10- pip freeze                           to know if that tool has been installed 
+11- pip install django                   for installing Django for the computer as new/  waiting untill sayes successfull installed django
+12-pip freeze                            to know the what has been installed
+13- mkdir src                            to make new folder inside blog // important 
+14- django-admin startproject blog .     /for creating project with Django // so when you open the file you will find the project there
+15-python manage.py runserver             /to run the server of the project 
+16-127.0.00.1:8000                        / this ip you open it in browser // Google or other and you will find (django page)
+17-127.0.00.1:8000/admin                  this will open admin page of Django page 
+
+This commends for run and activate the server if it is off 
+1-cd Desktop 
+2- cd blog 
+3- .\Scripts\activate 
+4- cd src
+5- python manage.py runserver               this the last commend for running the server  ///         this command is alternative            ./manage.py runserver
+6- Ctrl+c                                                    for stoping the Django server from the cdm terminal we press  
+
+for intering your project which on Desktop we do as fallowing:
+1-cd Desktop                                 this first for choosing the the dirction of terminal
+2-cd blog                                    this secound commend and (blog) or any file that is the name it can be changes 
+
+
+
+
+
+
+
+Django on Linux: 
+This is the fisrt project in Django we do as fallow ; 
+before begin the project you should check with this command your computer and install the missed;  
+Open Terminal :- 
+1- sudo apt install python3                                       This command for installing python3 on Linux
+2-sudo apt install python3-pip                                   This command downloading the pip3 
+3- pip3 -V                                                                  For checking the version of pip3 to make sure you get pip3
+4- python -m pip install --upgrade pip                                    for upgrading the pip only 
+5- pip3 install django                                                   Installing Django on the computer 
+6-django-admin                                                           for checking django is there and every thing is ready for the project 
+The Second Step and start the real project :::::----- 
+1- django-admin startproject My_Site                          this is the first step for the django project and (My_Site) is the name of the project and it could be changed any time.
+2- tree                                                                            this command for checking the project containes 
+3- python3 manage.py runserver                                   this command to run the project to the browser and we use it many times   ///         this command is alternative            ./manage.py runserver
+4- Crtl+C                                                                         this command for stopping the server working
+For making app in our project and this is the second stage; 
+1- python manage.py startapp blog                                 this command for making new app in main project of django 
+2- python3 manage.py runserver                                     for running the server 
+3- python 3 manage.py migrate                                       for running migrates for the project to avoide the mastake during work 
+
+The Work Steps On Project As Below; 
+1- urls.py                                                                      this page controlling the other pages 
+       the first step we go to this page to make copy for this link  ( *  path('admin/', admin.site.urls),  *) and change the admin link to another page name word like this (*    path('about/', my_about, name='about'),  *) and we do this for each page that we add to our app, and we make one link also for home page like this link  (*     path('', views.my_home, name='home'),     *) under another links that we menstioned then already. 
+2 - views.py                                                                this page controll the changing which done in urls.py like what happen above, when we add the link  (*     path('about/', my_about),    *)   we should go to add this function (* def my_about(request):
+                                                          return HttpResponse('my_about')   *) 
+for each page we wnat to create in  views.py page to make running corectly, and also we should add this link  (*   from django.http import HttpResponse         *) in the top of page 
+3- views.py                                        we have to make link to this page we should to make this link (*    from blog import views     *) in top with another links, and blog word this is the name of the app we should be change according to your app name, and also we have to add the word  (*  views   *) to the link down like this (*  path('about/', views.my_about),    *)  
+4- urls.py in my app                            and this is the best way to make new file in app NOT in main project and we save it as (*   urls.py  *) and we transfer all links we made befor and deleted from the original one, and make new link with adding the word (*   include   *) to the path link as in this example (*    from django.urls import path, include    *) 
+5- settings.py                                   we need to add our app to this page  in the line 33 that contains address as (*    INSTALLED_APPS = [     *) so we add our app by name blog this is my  app name, and  we go to apps.py page and we get the get the name of the class that comes after the word class and we got again to the sitting then add this name with page name to  (*   settings.py  *) page as in example  (*   'blog.apps.BlogConfig'    *)
+6- templates                                     this folder is nessary to make, we must create it inside of the our app to contain the html files, after we make this file we create html files for each page we wish to put it in our website, and we go to chenge in (*  views.py  *) page and add render to the all functions and that will be after the word ( *  return   *) and fixing the  what is inside the pranthses like this (*  from return HttpResponse('my_about')   to    return render(request, 'about.html')   *) for each function that we would to make page for it. also we delet or we stop the old link  (*   from django.http import HttpResponse    *) with the commit sign # to stop it.
+7- base.html   file                                    when we want to connect the links of another html pages to  the home page we do like so 
+A- we make html file inside a template folder with name (*   base.html   *)
+B- we put in title Base and will contains this links (*    <a href="{% url 'home' %}">Home</a>  *) so we create this for each page that we have, and also we add this links two links under too (*   {% block content %}  and under this link we put (*   {% endblock content %}   *)    this two links help us to show the information which in pages, Note,  Home is the name of the page.
+C- we go to each page that we have like Home, Index, and we put like this python link (*   {% extends 'base.html' %}    *) inside and in top of <body>  </body> of a html frame. 
+D- we put this link (*   {% block content %}   *) under
+E- we put this link (*    {% block content %}   *) in the last of <body> frame, so that will be in above of </body> tag, to show the information of html page. 
+8- settings.py                               we go to this page and looking for the block with name (*    TEMPLATES = [        *) and in inside the tage of word   'DIRS':  [ ],     we put like this link (*    os.path.join(BASE_DIR, 'blog/templates')      *)  Notes: blog is the name of the app and templates is our folder in blog app,  we do like this to make mention to the templates folder to the main project. 
+9- test.py                                           this page is for checking our pages in our app. 
+10-models.py                                    This page is very important, it concedering the database of an app our the center of the DataBase 
+Works; 
+A- for exprement, we make Class for Text container as fallowing, the class will be as this 
+class Posts(models.Model):
+    text = models.TextField() 
+and we go to admin.py page to connect it this class, so admin.py is the main page that reach to the Data of the app, in this way we need to connect the page of models.py and it's information to admin.py page, we make this link (*   from blog.models import Posts   *), Note Posts is the name of a class not important and can be changed, and blog is our app name. 
+B- we make Register link also in admin.py page for models.py page like this link (*   admin.site.register(Posts)   *), Note; (register ) in this link that means record this class of (Postes). 
+
+Note: 
+when we finish every thing on our project we should make this command ; 
+python3 manage.py migrate 
+$ this command make updating for all our works in our project to avoide the mistakes in running server of the Django 
+       
+
+
+the project user      admin 
+password               12345
+
+
+
+
+
+
+
+
+
+
+
+Note : - 
+
+ 
+2- sudo apt-get install (name of the program)          This is for installing new application on Linux
+3- sudo dpkg -i (name of a program)                         This command also for installing new application on Linux
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Linux : 
+________________
+Linux commands: 
+for intering the Disktop we do this command                  ls   
+for delet the cmd and make clear    command                  clear  
+
+
+
+Windows: 
+___________ 
+Windows command:
+for intering the Disktop we do this command                 dir   
+for delet the cmd and make clear    command                 cls
+     
