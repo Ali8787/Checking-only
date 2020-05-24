@@ -1,9 +1,3 @@
-days = dict(
-    s = "starday",
-    s2 = "sunday",
-    m = "monday",
-    t = "tosday",
-    w = "wendsday",
-    f = "fraiday")
-day = "f"
-print(days.get(day))
+
+vmworkstation pro  15
+code : YZ718-4REEQ-08DHQ-JNYQC-ZQRD0
