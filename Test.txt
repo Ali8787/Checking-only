@@ -137,8 +137,11 @@ Note : -
 
 
 Note: 
+Good instllation of Andriod Studio in this vedio 
+https://www.youtube.com/watch?v=axtVId9ASmY&t=360s 
 to add icon of Andriod Studio on Linux Desktop 
-Tools -> Create Desktop Entry. Done, the app will be in your application grid.
+Tools -> Create Desktop Entry. Done, the app will be in your application grid. 
+
 
 
 
