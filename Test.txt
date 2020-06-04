@@ -129,6 +129,8 @@ Note : -
 3- sudo dpkg -i (name of a program)                    This command also for installing new application on Linux
 4- snap remove android-studio                          This command for removing the software or andriod studio
 5- sudo apt-get remove android-studio                  This command works too 
+6- sudo apt install gnome-software                     This command for getting the software center in Ubuntu once be lost
+7- sudo apt autoremove                                 This command cleaning the system from necessary files 
 
 
 
