@@ -144,6 +144,12 @@ https://www.youtube.com/watch?v=axtVId9ASmY&t=360s
 to add icon of Andriod Studio on Linux Desktop 
 Tools -> Create Desktop Entry. Done, the app will be in your application grid. 
 
+Note: 
+install Genymotion we set this command           1-chmod +x genymotion-3.1.0-linux_x64.bin
+                                                 2-./genymotion-3.1.0-linux_x64.bin
+
+
+
 
 
 
